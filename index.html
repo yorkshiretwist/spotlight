@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<title>Spotlight</title>
+</head>
+<body>
+<p style="padding:150px">Click the boxes to spotlightify. Click again or press 'escape' to exit.</p>
+<div id="one" style="position:absolute;top:10px;left:10px;width:100px;height:100px;background:#F3A3A3">ONE</div>
+<div id="two" style="position:absolute;top:30px;right:30px;width:100px;height:50px;background:#AAE7AA">TWO</div>
+<div id="three" style="position:absolute;bottom:20px;left:50px;right:50px;height:100px;background:#9B9BE9">THREE</div>
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="spotlight.jquery.js"></script>
+<script>
+$(function(){
+  $('#one').click(function(){
+    $(this).spotlight();
+  });
+  $('#two').click(function(){
+    $(this).spotlight({
+      padding: 20
+    });
+  });
+  $('#three').click(function(){
+    $(this).spotlight({
+      spotlightshape: 'rectangle'
+    });
+  });
+});
+</script>
+<html>
